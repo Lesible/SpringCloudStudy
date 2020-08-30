@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: microservice-consumer-movie-openfeign
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8088
+
+logging:
+  level:
+    com.relic.cloud.client: debug

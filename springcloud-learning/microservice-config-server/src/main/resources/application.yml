@@ -1,0 +1,24 @@
+server:
+  port: 3456
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Lesible/spring-cloud-config.git
+          # 搜索目录
+          search-paths:
+            - spring-cloud-config
+      # 设置需要拉取的分支
+      label: master
+
+
+# 注册到 eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
