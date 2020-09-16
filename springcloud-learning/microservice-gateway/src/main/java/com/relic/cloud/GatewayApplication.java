@@ -1,22 +1,20 @@
-package com.relic;
+package com.relic.cloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
-import java.util.function.Predicate;
-
 /**
- * <p>date 2020-08-11 18:58</p>
+ * <p> @date: 2020-09-15 19:02</p>
  *
  * @author Lesible
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ConfigClientService {
+public class GatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConfigClientService.class, args);
+        SpringApplication.run(GatewayApplication.class, args);
     }
 
 }

@@ -1,0 +1,23 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: user-service      # 可以使用微服务的名称 不可重复
+          uri: http://localhost:8080    # 最后需要访问的地址
+          predicates: # 断言 (进入此路由的条件)
+            - Path=/user/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

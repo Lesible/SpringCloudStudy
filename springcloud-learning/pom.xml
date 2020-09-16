@@ -18,11 +18,12 @@
         <module>microservice-consumer-movie-openfeign</module>
         <module>microservice-config-server</module>
         <module>microservice-config-client</module>
+        <module>microservice-gateway</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
+        <spring-cloud.version>Hoxton.SR5</spring-cloud.version>
         <spring-boot.version>2.2.5.RELEASE</spring-boot.version>
     </properties>
 

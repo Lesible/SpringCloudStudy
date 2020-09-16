@@ -5,13 +5,10 @@
     <parent>
         <groupId>com.relic</groupId>
         <artifactId>springcloud-learning</artifactId>
-        <version>1.0-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>1.0</version>
     </parent>
+
     <artifactId>microservice-provider-user</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>microservice-provider-user</name>
-    <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -21,12 +18,7 @@
         <dependency>
             <groupId>com.relic</groupId>
             <artifactId>common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.relic</groupId>
-            <artifactId>microservice-consumer-movie-openfeign</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -45,6 +37,12 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jackson-dataformat-xml</artifactId>
+                    <groupId>com.fasterxml.jackson.dataformat</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 

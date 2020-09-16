@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 
 /**
+ * <p>date: 2020-07-01 16:44</p>
  * @author Relic
- * @date 2020-07-01 16:44
  */
 @FeignClient(name = "microservice-provider-user")
 public interface UserClient {
@@ -22,7 +22,7 @@ public interface UserClient {
      * @return 用户实体
      */
     @GetMapping("/user/{id}")
-    User getUser(@PathVariable Long id);
+    User getUser(@PathVariable("id") Long id);
 
     /**
      * 远程调用微服务获取所有用户
